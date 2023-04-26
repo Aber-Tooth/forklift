@@ -24,5 +24,19 @@ basic.showLeds(`
     . . # . .
     `)
 basic.forever(function () {
-	
+    if (joystickbit.getButton(joystickbit.JoystickBitPin.P13)) {
+        radio.sendNumber(6)
+    } else if (joystickbit.getButton(joystickbit.JoystickBitPin.P13)) {
+        radio.sendNumber(7)
+    } else {
+    	
+    }
+})
+basic.forever(function () {
+    if (Action == 6) {
+        Forkup()
+    }
+    if (Action == 7) {
+        Forkdown()
+    }
 })
